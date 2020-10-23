@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:phone_auth_example/signup_screen.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -59,7 +60,18 @@ class _HomePageState extends State<HomePage> {
                           style: TextStyle(color: Colors.white),
                         ),
                         color: Colors.cyan,
-                      )
+                      ),
+                      RaisedButton(
+                        onPressed: () {
+                          Navigator.of(context)
+                              .pushNamed(SignupScreen.routeName);
+                        },
+                        child: Text(
+                          "GatEntry",
+                          style: TextStyle(color: Colors.white),
+                        ),
+                        color: Colors.cyan,
+                      ),
                     ],
                   ),
                 )
